@@ -18,7 +18,7 @@ const App2 = () => {
   return (
     <>
       <div className="container-fluid ">
-        <div className="row m-auto">
+        <div className="row p-4 m-auto">
           {data.map((data, i) => {
             return (
               <>
