@@ -39,11 +39,21 @@ const Filter = () => {
         <div className="row-cols-12 mt-3">
           <label>Search</label>
           <input
-            className="form-control ds-input mb-4"
+            className="form-control ds-input mb-2"
             type="text"
             placeholder="Format 6/20/2019 (DD/MM/YYYY)"
             onChange={(e) => setSearch(e.target.value)}
           />
+        </div>
+        <div className="progress mb-2">
+          <div
+            className="progress-bar progress-bar-striped progress-bar-animated"
+            role="progressbar"
+            aria-valuenow="75"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            style={{ width: "100%" }}
+          ></div>
         </div>
         <div className="row">
           {rev.map((data, i) => {

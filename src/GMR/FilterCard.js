@@ -3,12 +3,12 @@ import React from "react";
 const FilterCard = ({ b1a, b1b, date, esu06, incomingsolarpanel }) => {
   return (
     <>
-      <div className="col-lg-3 col-sm-12 mb-4">
+      <div style={{ userSelect: "none" }} className="col-lg-3 col-sm-12 mb-4">
         <div className="card text-center">
           <div className="card-body">
             <h2 className="card-title">Load Details</h2>
             <h6 className="card-text">
-              B1A Substation Cunsumption:
+              B1A Substation Consumption:
               <span style={{ userSelect: "none" }}>
                 <strong className="bg-dark shadow" style={{ color: "red" }}>
                   {b1a}
@@ -16,7 +16,7 @@ const FilterCard = ({ b1a, b1b, date, esu06, incomingsolarpanel }) => {
               </span>
             </h6>
             <h6 className="card-text">
-              B1B Substation Cunsumption:
+              B1B Substation Consumption:
               <span style={{ userSelect: "none" }}>
                 <strong className="bg-dark shadow" style={{ color: "yellow" }}>
                   {b1b}
@@ -24,7 +24,7 @@ const FilterCard = ({ b1a, b1b, date, esu06, incomingsolarpanel }) => {
               </span>
             </h6>
             <h6 className="card-text">
-              ESU06 Substation Cunsumption:
+              ESU06 Substation Consumption:
               <span style={{ userSelect: "none" }}>
                 <strong className="bg-dark shadow" style={{ color: "red" }}>
                   {esu06}
@@ -32,7 +32,7 @@ const FilterCard = ({ b1a, b1b, date, esu06, incomingsolarpanel }) => {
               </span>
             </h6>
             <h6 className="card-text">
-              SolorPower Cunsumption:
+              SolorPower Consumption:
               <span style={{ userSelect: "none" }}>
                 <strong className="bg-dark shadow" style={{ color: "green" }}>
                   {incomingsolarpanel}
