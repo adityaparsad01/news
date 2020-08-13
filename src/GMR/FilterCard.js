@@ -1,6 +1,6 @@
 import React from "react";
 
-const FilterCard = ({ b1a, b1b, date, esu06, incomingsolarpanel, bg }) => {
+const FilterCard = ({ b1a, b1b, date, esu06, incomingsolarpanel }) => {
   return (
     <>
       <div className="col-lg-3 col-sm-12 mb-4">
@@ -36,6 +36,14 @@ const FilterCard = ({ b1a, b1b, date, esu06, incomingsolarpanel, bg }) => {
               <span style={{ userSelect: "none" }}>
                 <strong className="bg-dark shadow" style={{ color: "green" }}>
                   {incomingsolarpanel}
+                </strong>
+              </span>
+            </h6>
+            <h6 className="card-text">
+              SolorPower Cunsumption:
+              <span style={{ userSelect: "none" }}>
+                <strong className="bg-dark shadow" style={{ color: "green" }}>
+                  {incomingsolarpanel + b1a + b1b + esu06}
                 </strong>
               </span>
             </h6>
