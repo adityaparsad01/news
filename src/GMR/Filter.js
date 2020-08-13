@@ -3,9 +3,7 @@ import FilterCard from "./FilterCard";
 import bgimg from "./gmrl.png";
 const Filter = () => {
   const [question, setQuestion] = useState([]);
-
-  const rev = question.reverse([]);
-  console.log(rev);
+  const [search, setSearch] = useState("");
 
   const getData = async () => {
     const res = await fetch("https://waitominuteapi.tk/tnc");
@@ -14,8 +12,15 @@ const Filter = () => {
   };
 
   useEffect(() => {
-    getData();
+    getData("");
+    setSearch();
   }, []);
+
+  const filterMan = question.filter((question) => {
+    return question.date.toLowerCase().includes(search);
+  });
+
+  const rev = filterMan.reverse([]);
 
   return (
     <>
@@ -25,6 +30,14 @@ const Filter = () => {
         </a>
       </nav>
       <div className="container-fluid mt-6">
+        <div className="row">
+          <input
+            className="form-control ds-input mb-4"
+            type="text"
+            placeholder="Format 6/20/2019 (DD/MM/YYYY)"
+            onChange={(e) => setSearch(e.target.value)}
+          />
+        </div>
         <div className="row">
           {rev.map((data, i) => {
             return (

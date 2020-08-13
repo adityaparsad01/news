@@ -3,6 +3,6 @@ import ReactDOM from "react-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import "./index.css";
-import APP from "./Filter";
+import APP from "./GMR/Filter";
 
 ReactDOM.render(<APP />, document.getElementById("root"));
