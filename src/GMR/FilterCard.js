@@ -39,14 +39,6 @@ const FilterCard = ({ b1a, b1b, date, esu06, incomingsolarpanel }) => {
                 </strong>
               </span>
             </h6>
-            <h6 className="card-text">
-              SolorPower Cunsumption:
-              <span style={{ userSelect: "none" }}>
-                <strong className="bg-dark shadow" style={{ color: "green" }}>
-                  {incomingsolarpanel + b1a + b1b + esu06}
-                </strong>
-              </span>
-            </h6>
             <p className="card-text">
               <small className="text-muted">Last updated {date}</small>
             </p>
