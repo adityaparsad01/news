@@ -21,7 +21,7 @@ const Filter = () => {
     setSearch();
   }, []);
 
-  const filterMan = question.filter((question) => {
+  const filterMan = question.filter((question, i) => {
     return question.date.toLowerCase().includes(search);
   });
 
@@ -33,10 +33,11 @@ const Filter = () => {
         <a className="navbar-brand " href="/">
           <img src={bgimg} width="200" height="90" alt="" loading="lazy" />
         </a>
-        <a>{cDate}</a>
+        <h6 className="date rounded-pill bg-warning p-2">{cDate}</h6>
       </nav>
       <div className="container-fluid mt-6">
         <div className="row-cols-12 mt-3">
+          <label>Search</label>
           <input
             className="form-control ds-input mb-4"
             type="text"
@@ -54,6 +55,7 @@ const Filter = () => {
                   esu06={(data.esu06 / 1000).toFixed(2)}
                   incomingsolarpanel={data.incomingsolarpanel}
                   date={data.date}
+                  key={i}
                 />
               </>
             );
