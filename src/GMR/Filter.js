@@ -16,16 +16,16 @@ const Filter = () => {
     setQuestion(data.tnc);
   };
 
-  useEffect(() => {
-    getData("");
-    setSearch();
-  }, []);
-
   const filterMan = question.filter((question, i) => {
     return question.date.toLowerCase().includes(search);
   });
 
   const rev = filterMan.reverse([]);
+
+  useEffect(() => {
+    getData("");
+    setSearch();
+  }, []);
 
   return (
     <>
@@ -52,7 +52,7 @@ const Filter = () => {
             aria-valuenow="75"
             aria-valuemin="0"
             aria-valuemax="100"
-            style={{ width: "100%" }}
+            style={{ width: "90%" }}
           ></div>
         </div>
         <div className="row">

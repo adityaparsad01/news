@@ -10,7 +10,10 @@ const FilterCard = ({ b1a, b1b, date, esu06, incomingsolarpanel }) => {
             <h6 className="card-text">
               B1A Substation Consumption:
               <span style={{ userSelect: "none" }}>
-                <strong className="bg-dark shadow" style={{ color: "red" }}>
+                <strong
+                  className="bg-dark shadow rounded-pill p-1"
+                  style={{ color: "red" }}
+                >
                   {b1a}
                 </strong>
               </span>
